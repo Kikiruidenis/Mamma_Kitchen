@@ -49,6 +49,7 @@
             .title {
                 text-align:center;
                 font-size: 84px;
+                color:white;
             }
             .form{
                 width:100%;
