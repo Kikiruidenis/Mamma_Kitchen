@@ -155,9 +155,8 @@
     <div class="col-md-4">&copy; 2019, Created by <a href=" ">Kikirui Denis</a>
     </div>
     <ul>      
-    <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter "></i></a>Twitter</li>         
-    <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>Facebook</li>       
-    <li><a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-play"></i></a>Youtube</li>
+            <a href=""> <img style="width:40px;height:45px;"src ="{{ URL:: to('/image/twitter.jpg') }}"></a> Twitter     
+             <a href=""> <img style="width:40px;height:45px;"src ="{{ URL:: to('/image/facebook.jpg') }}"></a> Facebook       
             
     </ul>   
     </div>
