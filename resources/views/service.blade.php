@@ -110,7 +110,6 @@
                 </div>
             @endif
 
-           
 
             <div class="content">
                 <div class="title m-b-md">
@@ -119,9 +118,7 @@
 
                 <div class="links">
                 @section('content')
-                <ul class="nav navbar-nav navbar-right">
-	      <li><a href="../"><span class="glyphicon glyphicon-backward"></span><p> Return Home</p></a></li>
-	    </ul>
+               
 	
                 </div>
             </div>
@@ -139,7 +136,8 @@
         <table>
         <tr>
             <td>
-            <p> <a href="">OUR SALADS<br>SEE ALL OUR SALADS</a></p>
+            <p> <a href="">OUR SALADS<
+           br>SEE ALL OUR SALADS</a></p>
             </td>
             <td>
            <a href="">" <img src ="{{ URL:: to('/image/Screenshot_3.png') }}"></a>

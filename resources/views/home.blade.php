@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Mamma Kitchen Restaurant</title>
+@extends('layouts.app')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+@section('content')
 
-        <!-- Styles -->
-        <style>
+<style>
             html, body {
                 background-color: #fff;
                 color: #636b6f;
@@ -42,13 +35,14 @@
 
             .content {
                 text-align: center;
-                background:blue;
+                
                 width:100%;
             }
 
             .title {
                 text-align:center;
                 font-size: 84px;
+                background:blue;
                 color:white;
             }
             .form{
@@ -97,73 +91,84 @@
                 margin-bottom: 30px;
             }
         </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
+        <body>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                   
 
             <div class="content">
                 <div class="title m-b-md">
-                Mamma Kitchen Restaurant
+                    Mamma Kitchen Restaurant
                 </div>
-
+                <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
                
 
                 <div class="links">
-                    <ul class="nav navbar-nav navbar-left">
-	      <li><a href="../"><span class="glyphicon glyphicon-backward"></span><p> Return Home</p></a></li>
-	    </ul>
-	
+                    <a href="home">Home</a>
+                    <a href="/service">Service</a>
+                    <a href="/blog">Blog</a>
+                   
+                    </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+
+                <div class="links">
+                @section('content')
+               
         <img src ="{{ URL:: to('/image/Screenshot_2.png') }}"  class="image1">
-      
+
 
         <p>
             Stop by and discover all the Kenya flavors through our dishes, our planks to share and our home made desserts.
             Our menu offers a varied choice of pasta, pizzas and salads without forgeting the famous mialanes schnitzel.
             Our gtenerous dishes will awaken your taste buds. All tastes will be satisfied.
             </p>
-            
-           <!-- <img src ="{{ URL:: to('/image/Screenshot_3.png') }}">
-            <img src ="{{ URL:: to('/image/Screenshot_4.png') }}">
-            <img src ="{{ URL:: to('/image/Screenshot_6.png') }}">
--->
+           
+
         <p style="text-align:center;,font-size:24px;">We are recruiting every year. 
         Send your cv by email to:<br>
         <a href="management@mamakitchencaffe.com">management@mamakitchencaffe.com</a></p>
        
+                
 
-
-           
+    
 <footer style="text-align:center">
             
-    <p class="footer-links">Terms of Use and Privacy Policy</p>  
-    <div class="col-md-4">&copy; 2019, Created by <a href=" ">Kikirui Denis</a>
-    </div>
-    <ul>      
+            <p class="footer-links">Terms of Use and Privacy Policy</p>
+                  
+                  
+            <div class="col-md-4">&copy; 2019, Created by <a href="">Kikirui Denis</a></div>
+                  
+            <div class="col-md-4"> 
+             
+                    
+            <ul class="social">
+                      
             <a href=""> <img style="width:40px;height:45px;"src ="{{ URL:: to('/image/twitter.jpg') }}"></a> Twitter     
              <a href=""> <img style="width:40px;height:45px;"src ="{{ URL:: to('/image/facebook.jpg') }}"></a> Facebook       
             
-    </ul>   
-    </div>
-        
-    </div>
-      
-    
-    </footer>
+            </ul>   
+            </div>
+                
+            </div>
+              
+            
+            </footer>
     </body>
 </html>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection

@@ -42,13 +42,14 @@
 
             .content {
                 text-align: center;
-                background:blue;
+                
                 width:100%;
             }
 
             .title {
                 font-size: 84px;
                 text-align:top;
+                background:blue;
                 color:white;
             }
 
@@ -110,14 +111,7 @@
                 Mamma Kitchen Restaurant
                 </div>
 
-                <div class="links">
-                <ul class="nav navbar-nav navbar-right">
-	      <li><a href="../"><span class="glyphicon glyphicon-backward"></span><p> Return Home</p></a></li>
-	    </ul>
-	
-                </div>
-            </div>
-        </div>
+              
         <img src ="{{ URL:: to('/image/Screenshot_2.png') }}"  class="image1">
         
 <br>
