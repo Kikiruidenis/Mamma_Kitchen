@@ -83,6 +83,7 @@
                 border:1px solid #add;
                 padding: 5px;
                 width:100%;
+                height:600px;
             }
 
 
@@ -114,7 +115,7 @@
                
 
                 <div class="links">
-                    <a href="home">Home</a>
+                    <a href="#">Home</a>
                     <a href="/service">Service</a>
                     <a href="/blog">Blog</a>
                    

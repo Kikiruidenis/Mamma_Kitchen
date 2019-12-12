@@ -41,13 +41,14 @@
 
             .content {
                 text-align: center;
-                background:blue;
+                
                 width:100%;
             }
 
             .title {
                 font-size: 84px;
                 text-align:top;
+                background:blue;
                 color:white;
             }
             .form{
@@ -71,6 +72,7 @@
             .image1{
                 padding: 5px;
                 width:100%;
+                height:600px;
         
             }
             p{
@@ -95,34 +97,20 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
+       
 
             <div class="content">
                 <div class="title m-b-md">
                     Mamma Kitchen Restaurant
                 </div>
 
+                
                 <div class="links">
-                @section('content')
-               
-	
-                </div>
-            </div>
-        </div>
+                    <a href="home">Home</a>
+                    <a href="#">Service</a>
+                    <a href="/blog">Blog</a>
+                   
+                    </div>
         <img src ="{{ URL:: to('/image/Screenshot_2.png') }}"  class="image1">
 
 
@@ -133,6 +121,7 @@
             </p>
             <h1> We offer the following variety of dishes and home mad desserts</h1>
             <center>
+
         <table>
         <tr>
             <td>

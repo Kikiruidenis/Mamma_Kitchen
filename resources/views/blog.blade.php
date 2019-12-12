@@ -62,6 +62,10 @@
                 text-decoration: none;
                 text-transform: uppercase;
             }
+           .col-md-4 col-form-label text-md-{
+               width:100px;
+               height:10px;
+           }
             .footer
                     {
                         width:800px;
@@ -82,7 +86,14 @@
                 border:1px solid #add;
                 padding: 5px;
                 width:100%;
+                height:600px;
             }
+            .form{
+                width:100%;
+                 height:206px
+                  border:1; 
+                  cellpadding:0; 
+                  cellspacing:0;
 
 
             .m-b-md {
@@ -91,30 +102,44 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
+       
             <div class="content">
                 <div class="title m-b-md">
                 Mamma Kitchen Restaurant
                 </div>
+                <div class="links">
+                    <a href="home">Home</a>
+                    <a href="/service">Service</a>
+                    <a href="#">Blog</a>
+                   
+                    </div>
 
               
         <img src ="{{ URL:: to('/image/Screenshot_2.png') }}"  class="image1">
         
 <br>
+<div>
+<form>
+<label style="width:100%; ,height:20px;">Meal</label>
+
+
+    <input type="text"  class="form-control @error('meal') is-invalid @enderror" 
+    name="meal" value="{{ old('meal') }}" required autocomplete="meal" autofocus>
+
+    <label >Price</label>
+
+
+    <input type="number"  class="form-control @error('pice') is-invalid @enderror" 
+    name="price" value="{{ old('price') }}" required autocomplete="price" autofocus>
+
+    <label >Table</label>
+
+    <input type="number" class="form-control @error('table') is-invalid @enderror" 
+    name="table" value="{{ old('table') }}" required autocomplete="table" autofocus>
+
+</form>
+</div>
+<input type="button" name="Submit" value="submit"> 
 
 <h3 style="text-align:center;,font-size:24px;" >We are open on Monday to Saturday from 10:00 to 22:30</h3>
 <address style="text-align:center;,font-size:24px;">
@@ -141,11 +166,6 @@ Email:<a href="management@mamakitchencaffe.com">mammakitchen@gmail.com</a></p></
              <a href=""> <img style="width:40px;height:45px;"src ="{{ URL:: to('/image/facebook.jpg') }}"></a> Facebook       
             
             </ul>   
-            </div>
-                
-            </div>
-              
-            
             </footer>
     </body>
 </html>
